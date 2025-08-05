@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Platform - Project Details | Alex Morgan</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdeveloper9160back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Fixed Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-secondary-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="portfolio_landing_page.html" class="text-xl font-semibold text-primary hover:text-primary-700 transition-colors">
+                        Alex Morgan
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="portfolio_landing_page.html#about" class="nav-link text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="portfolio_landing_page.html#skills" class="nav-link text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="portfolio_landing_page.html#experience" class="nav-link text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="portfolio_landing_page.html#education" class="nav-link text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        <a href="articles_blog.html" class="nav-link text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Articles</a>
+                        <a href="contact_collaboration.html" class="nav-link text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-text-secondary hover:text-primary hover:bg-secondary-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path class="inline" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
+                    <a href="portfolio_landing_page.html#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-primary hover:bg-secondary-100">About</a>
+                    <a href="portfolio_landing_page.html#skills" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-primary hover:bg-secondary-100">Skills</a>
+                    <a href="portfolio_landing_page.html#experience" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-primary hover:bg-secondary-100">Experience</a>
+                    <a href="portfolio_landing_page.html#education" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-primary hover:bg-secondary-100">Education</a>
+                    <a href="articles_blog.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-primary hover:bg-secondary-100">Articles</a>
+                    <a href="contact_collaboration.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-primary hover:bg-secondary-100">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <section class="pt-20 pb-4 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-sm text-text-secondary">
+                <a href="portfolio_landing_page.html" class="hover:text-primary transition-colors">Home</a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                <span class="text-text-primary font-medium">Projects</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                <span class="text-text-primary font-medium">E-Commerce Platform</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Project Hero Section -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <div class="mb-8">
+                        <h1 class="text-4xl sm:text-5xl font-bold text-text-primary mb-4">E-Commerce Platform</h1>
+                        <p class="text-xl text-text-secondary mb-6 leading-relaxed">
+                            A full-stack e-commerce solution built with React, Node.js, and MongoDB, featuring real-time inventory management, secure payment processing, and an intuitive admin dashboard.
+                        </p>
+                        
+                        <!-- Technology Tags -->
+                        <div class="flex flex-wrap gap-3 mb-8">
+                            <span class="skill-badge">React</span>
+                            <span class="skill-badge">Node.js</span>
+                            <span class="skill-badge">MongoDB</span>
+                            <span class="skill-badge">Express.js</span>
+                            <span class="skill-badge">Stripe API</span>
+                            <span class="skill-badge">JWT</span>
+                            <span class="skill-badge">Socket.io</span>
+                            <span class="skill-badge">AWS S3</span>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="javascript:void(0)" class="btn-primary inline-flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                                View Live Demo
+                            </a>
+                            <a href="javascript:void(0)" class="btn-secondary inline-flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View Source Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Featured Image/Demo -->
+                    <div class="relative mb-12">
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="E-Commerce Platform Dashboard" class="w-full h-96 object-cover cursor-pointer hover-lift" loading="lazy" onclick="openLightbox(this.src)" onerror="this.src='https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg pointer-events-none"></div>
+                    </div>
+                </div>
+
+                <!-- Project Metadata Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="card sticky top-24">
+                        <h3 class="text-lg font-semibold text-text-primary mb-6">Project Details</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-sm font-medium text-text-secondary mb-2">Duration</h4>
+                                <p class="text-text-primary">4 months</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-sm font-medium text-text-secondary mb-2">Team Size</h4>
+                                <p class="text-text-primary">3 developers</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-sm font-medium text-text-secondary mb-2">My Role</h4>
+                                <p class="text-text-primary">Full Stack Developer & Team Lead</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-sm font-medium text-text-secondary mb-2">Client</h4>
+                                <p class="text-text-primary">TechCorp Solutions</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-sm font-medium text-text-secondary mb-2">Completion Date</h4>
+                                <p class="text-text-primary">December 2024</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-sm font-medium text-text-secondary mb-2">Key Skills Demonstrated</h4>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="text-xs bg-primary-100 text-primary px-2 py-1 rounded">Full Stack Development</span>
+                                    <span class="text-xs bg-accent-100 text-accent px-2 py-1 rounded">API Design</span>
+                                    <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">Database Design</span>
+                                    <span class="text-xs bg-warning-100 text-warning px-2 py-1 rounded">Team Leadership</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-bold text-text-primary mb-8">Project Overview</h2>
+                    
+                    <!-- Challenge -->
+                    <div class="mb-12">
+                        <h3 class="text-xl font-semibold text-text-primary mb-4 flex items-center">
+                            <div class="w-8 h-8 bg-error-100 rounded-lg flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                                </svg>
+                            </div>
+                            The Challenge
+                        </h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Our client needed a comprehensive e-commerce solution that could handle high traffic volumes while providing a seamless user experience. The existing system was outdated, slow, and couldn't scale with their growing business needs. Key challenges included:
+                        </p>
+                        <ul class="mt-4 space-y-2 text-text-secondary">
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-error rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Legacy system with poor performance and frequent downtime
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-error rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Lack of real-time inventory management causing overselling
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-error rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Complex checkout process leading to high cart abandonment
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-error rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                No mobile optimization affecting 60% of their traffic
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="mb-12">
+                        <h3 class="text-xl font-semibold text-text-primary mb-4 flex items-center">
+                            <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                            </div>
+                            The Solution
+                        </h3>
+                        <p class="text-text-secondary leading-relaxed mb-4">
+                            I architected and developed a modern, scalable e-commerce platform using cutting-edge technologies. The solution focused on performance, user experience, and maintainability:
+                        </p>
+                        <ul class="space-y-2 text-text-secondary">
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Built with React for a responsive, interactive frontend
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Node.js/Express backend with RESTful API architecture
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                MongoDB for flexible, scalable data storage
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Real-time inventory updates using Socket.io
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Secure payment processing with Stripe integration
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Outcomes -->
+                    <div class="mb-12">
+                        <h3 class="text-xl font-semibold text-text-primary mb-4 flex items-center">
+                            <div class="w-8 h-8 bg-success-100 rounded-lg flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            Results & Impact
+                        </h3>
+                        <p class="text-text-secondary leading-relaxed mb-4">
+                            The new platform exceeded all performance expectations and delivered significant business value:
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-success-50 rounded-lg p-4">
+                                <div class="text-2xl font-bold text-success mb-1">85%</div>
+                                <div class="text-sm text-success-600">Faster page load times</div>
+                            </div>
+                            <div class="bg-primary-50 rounded-lg p-4">
+                                <div class="text-2xl font-bold text-primary mb-1">40%</div>
+                                <div class="text-sm text-primary-600">Increase in conversions</div>
+                            </div>
+                            <div class="bg-accent-50 rounded-lg p-4">
+                                <div class="text-2xl font-bold text-accent mb-1">99.9%</div>
+                                <div class="text-sm text-accent-600">System uptime</div>
+                            </div>
+                            <div class="bg-warning-50 rounded-lg p-4">
+                                <div class="text-2xl font-bold text-warning mb-1">60%</div>
+                                <div class="text-sm text-warning-600">Reduction in cart abandonment</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation Section -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-text-primary mb-12 text-center">Technical Implementation</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Architecture Overview -->
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-text-primary mb-6">System Architecture</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Frontend Layer</h4>
+                                <p class="text-sm text-text-secondary">React with Redux for state management, responsive design with Tailwind CSS</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">API Layer</h4>
+                                <p class="text-sm text-text-secondary">RESTful APIs with Node.js/Express, JWT authentication, rate limiting</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-success-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-text-primary">Database Layer</h4>
+                                <p class="text-sm text-text-secondary">MongoDB with optimized indexing, data validation, and backup strategies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Features -->
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-text-primary mb-6">Key Features Implemented</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-text-secondary">Real-time inventory management</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-text-secondary">Secure payment processing</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-text-secondary">Advanced search & filtering</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-text-secondary">Order tracking system</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-text-secondary">Admin dashboard with analytics</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-text-secondary">Email notifications</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-text-secondary">Mobile-responsive design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Code Snippets -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold text-text-primary mb-8 text-center">Code Highlights</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Frontend Code -->
+                    <div class="card">
+                        <h4 class="text-lg font-semibold text-text-primary mb-4">React Component - Product Card</h4>
+                        <div class="bg-text-primary rounded-lg p-4 overflow-x-auto">
+                            <pre class="text-sm text-green-400 font-mono"><code>const ProductCard = ({ product, onAddToCart }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  
+  const handleAddToCart = async () => {
+    setIsLoading(true);
+    try {
+      await onAddToCart(product.id);
+      toast.success('Added to cart!');
+    } catch (error) {
+      toast.error('Failed to add to cart');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    &lt;div className="card hover-lift"&gt;
+      &lt;img src={product.image} alt={product.name} /&gt;
+      &lt;h3&gt;{product.name}&lt;/h3&gt;
+      &lt;p&gt;${product.price}&lt;/p&gt;
+      &lt;button 
+        onClick={handleAddToCart}
+        disabled={isLoading}
+        className="btn-primary"
+      &gt;
+        {isLoading ? 'Adding...' : 'Add to Cart'}
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+};</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Backend Code -->
+                    <div class="card">
+                        <h4 class="text-lg font-semibold text-text-primary mb-4">Node.js API - Inventory Update</h4>
+                        <div class="bg-text-primary rounded-lg p-4 overflow-x-auto">
+                            <pre class="text-sm text-green-400 font-mono"><code>app.post('/api/inventory/update', async (req, res) => {
+  try {
+    const { productId, quantity } = req.body;
+    
+    const product = await Product.findById(productId);
+    if (!product) {
+      return res.status(404).json({ 
+        error: 'Product not found' 
+      });
+    }
+    
+    product.inventory = quantity;
+    await product.save();
+    
+    // Emit real-time update
+    io.emit('inventoryUpdate', {
+      productId,
+      newQuantity: quantity
+    });
+    
+    res.json({ 
+      success: true, 
+      product 
+    });
+  } catch (error) {
+    res.status(500).json({ 
+      error: error.message 
+    });
+  }
+});</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Gallery Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-text-primary mb-12 text-center">Project Gallery</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Homepage Design" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 rounded-lg flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                        </svg>
+                    </div>
+                    <p class="mt-3 text-sm font-medium text-text-primary">Homepage Design</p>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="relative group cursor-pointer" onclick="openLightbox('https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
+                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Product Catalog" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/29/06/15/code-1867992_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 rounded-lg flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                        </svg>
+                    </div>
+                    <p class="mt-3 text-sm font-medium text-text-primary">Product Catalog</p>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="relative group cursor-pointer" onclick="openLightbox('https://images.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
+                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                        <img src="https://images.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Shopping Cart" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 rounded-lg flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                        </svg>
+                    </div>
+                    <p class="mt-3 text-sm font-medium text-text-primary">Shopping Cart</p>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="relative group cursor-pointer" onclick="openLightbox('https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
+                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Admin Dashboard" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 rounded-lg flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                        </svg>
+                    </div>
+                    <p class="mt-3 text-sm font-medium text-text-primary">Admin Dashboard</p>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mobile Responsive" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 rounded-lg flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                        </svg>
+                    </div>
+                    <p class="mt-3 text-sm font-medium text-text-primary">Mobile Responsive</p>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="relative group cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                    <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Payment Integration" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 rounded-lg flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                        </svg>
+                    </div>
+                    <p class="mt-3 text-sm font-medium text-text-primary">Payment Integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Navigation -->
+    <section class="py-12 bg-surface border-t border-secondary-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                <a href="javascript:void(0)" class="flex items-center text-text-secondary hover:text-primary transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                    Previous Project
+                </a>
+                
+                <a href="portfolio_landing_page.html" class="btn-secondary">
+                    Back to Portfolio
+                </a>
+                
+                <a href="javascript:void(0)" class="flex items-center text-text-secondary hover:text-primary transition-colors">
+                    Next Project
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-semibold mb-4">Alex Morgan</h3>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        Full Stack Developer passionate about creating digital experiences that make a difference. Always learning, always building.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="portfolio_landing_page.html#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="portfolio_landing_page.html#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a></li>
+                        <li><a href="portfolio_landing_page.html#experience" class="text-gray-300 hover:text-white transition-colors">Experience</a></li>
+                        <li><a href="project_showcase_detail.html" class="text-gray-300 hover:text-white transition-colors">Projects</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="articles_blog.html" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact_collaboration.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-colors">Resume</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-colors">Portfolio</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Alex Morgan. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <img id="lightbox-image" src alt="Project Screenshot" class="max-w-full max-h-full object-contain rounded-lg" />
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Lightbox functionality
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.src = imageSrc;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox when clicking outside image
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') {
+                closeLightbox();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card, .skill-badge').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add loading states for external links
+        document.querySelectorAll('a[href^="http"]').forEach(link => {
+            link.addEventListener('click', function() {
+                this.style.opacity = '0.7';
+                setTimeout(() => {
+                    this.style.opacity = '1';
+                }, 1000);
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

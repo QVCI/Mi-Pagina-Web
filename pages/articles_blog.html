@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles & Blog - Alex Morgan</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdeveloper9160back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Fixed Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-secondary-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="portfolio_landing_page.html" class="text-xl font-semibold text-primary hover:text-primary-700 transition-colors">
+                        Alex Morgan
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="portfolio_landing_page.html#about" class="nav-link text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="portfolio_landing_page.html#skills" class="nav-link text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="portfolio_landing_page.html#experience" class="nav-link text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="portfolio_landing_page.html#education" class="nav-link text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        <a href="articles_blog.html" class="nav-link text-primary px-3 py-2 rounded-md text-sm font-medium">Articles</a>
+                        <a href="contact_collaboration.html" class="nav-link text-text-secondary hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-text-secondary hover:text-primary hover:bg-secondary-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path class="inline" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-secondary-200">
+                    <a href="portfolio_landing_page.html#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-primary hover:bg-secondary-100">About</a>
+                    <a href="portfolio_landing_page.html#skills" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-primary hover:bg-secondary-100">Skills</a>
+                    <a href="portfolio_landing_page.html#experience" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-primary hover:bg-secondary-100">Experience</a>
+                    <a href="portfolio_landing_page.html#education" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-primary hover:bg-secondary-100">Education</a>
+                    <a href="articles_blog.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-primary bg-primary-100">Articles</a>
+                    <a href="contact_collaboration.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-text-secondary hover:text-primary hover:bg-secondary-100">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Secondary Navigation Bar -->
+    <div class="fixed top-16 left-0 right-0 z-40 bg-surface border-b border-secondary-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-4">
+                <!-- Category Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <button class="category-filter active text-primary font-medium border-b-2 border-primary pb-1" data-category="all">
+                        All Articles
+                    </button>
+                    <button class="category-filter text-text-secondary hover:text-primary transition-colors pb-1" data-category="technical">
+                        Technical Tutorials
+                    </button>
+                    <button class="category-filter text-text-secondary hover:text-primary transition-colors pb-1" data-category="insights">
+                        Industry Insights
+                    </button>
+                    <button class="category-filter text-text-secondary hover:text-primary transition-colors pb-1" data-category="career">
+                        Career Advice
+                    </button>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-md ml-auto">
+                    <div class="relative">
+                        <input type="text" id="search-input" placeholder="Search articles..." class="w-full pl-10 pr-4 py-2 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Category Toggle -->
+                <div class="md:hidden">
+                    <button id="mobile-filter-toggle" class="p-2 text-text-secondary hover:text-primary">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.707A1 1 0 013 7V4z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Category Menu -->
+            <div id="mobile-filter-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-wrap gap-2">
+                    <button class="mobile-category-filter active bg-primary text-white px-3 py-1 rounded-full text-sm" data-category="all">
+                        All Articles
+                    </button>
+                    <button class="mobile-category-filter bg-secondary-100 text-text-secondary px-3 py-1 rounded-full text-sm" data-category="technical">
+                        Technical
+                    </button>
+                    <button class="mobile-category-filter bg-secondary-100 text-text-secondary px-3 py-1 rounded-full text-sm" data-category="insights">
+                        Insights
+                    </button>
+                    <button class="mobile-category-filter bg-secondary-100 text-text-secondary px-3 py-1 rounded-full text-sm" data-category="career">
+                        Career
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Page Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl font-bold text-text-primary mb-4">
+                    Articles & <span class="text-gradient">Blog</span>
+                </h1>
+                <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+                    Sharing insights, tutorials, and thoughts on web development, technology trends, and career growth
+                </p>
+            </div>
+
+            <!-- Featured Articles Section -->
+            <section class="mb-16">
+                <h2 class="text-2xl font-semibold text-text-primary mb-8">Featured Articles</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Featured Article 1 -->
+                    <article class="card hover:shadow-lg transition-all hover-lift featured-article">
+                        <div class="aspect-w-16 aspect-h-9 mb-6">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="React Performance Optimization" class="w-full h-64 object-cover rounded-lg" loading="lazy" onerror="this.src='https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-text-secondary">
+                                    <span>Jan 15, 2025</span>
+                                    <span>•</span>
+                                    <span>8 min read</span>
+                                    <span>•</span>
+                                    <span class="flex items-center">
+                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        2.4k views
+                                    </span>
+                                </div>
+                                <span class="text-xs bg-accent-100 text-accent px-2 py-1 rounded-full">Featured</span>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-text-primary hover:text-primary transition-colors">
+                                <a href="javascript:void(0)">Advanced React Performance Optimization Techniques</a>
+                            </h3>
+                            <p class="text-text-secondary leading-relaxed">
+                                Dive deep into advanced React optimization strategies including memoization, code splitting, and virtual DOM optimization. Learn how to identify performance bottlenecks and implement solutions that can improve your app's performance by up to 70%.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs bg-primary-100 text-primary px-2 py-1 rounded">React</span>
+                                    <span class="text-xs bg-accent-100 text-accent px-2 py-1 rounded">Performance</span>
+                                    <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">Advanced</span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <button class="text-text-secondary hover:text-primary transition-colors">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="text-text-secondary hover:text-primary transition-colors">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                        </svg>
+                                    </button>
+                                    <a href="javascript:void(0)" class="text-primary hover:text-primary-700 text-sm font-medium">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Featured Article 2 -->
+                    <article class="card hover:shadow-lg transition-all hover-lift featured-article">
+                        <div class="aspect-w-16 aspect-h-9 mb-6">
+                            <img src="https://images.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Full Stack Development Career Guide" class="w-full h-64 object-cover rounded-lg" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-text-secondary">
+                                    <span>Jan 8, 2025</span>
+                                    <span>•</span>
+                                    <span>12 min read</span>
+                                    <span>•</span>
+                                    <span class="flex items-center">
+                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                        </svg>
+                                        3.1k views
+                                    </span>
+                                </div>
+                                <span class="text-xs bg-accent-100 text-accent px-2 py-1 rounded-full">Featured</span>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-text-primary hover:text-primary transition-colors">
+                                <a href="javascript:void(0)">The Complete Full Stack Developer Career Roadmap 2025</a>
+                            </h3>
+                            <p class="text-text-secondary leading-relaxed">
+                                A comprehensive guide to becoming a successful full stack developer in 2025. From essential technologies to career progression strategies, this roadmap covers everything you need to know to build a thriving development career.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs bg-warning-100 text-warning px-2 py-1 rounded">Career</span>
+                                    <span class="text-xs bg-primary-100 text-primary px-2 py-1 rounded">Full Stack</span>
+                                    <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">Guide</span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <button class="text-text-secondary hover:text-primary transition-colors">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="text-text-secondary hover:text-primary transition-colors">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                        </svg>
+                                    </button>
+                                    <a href="javascript:void(0)" class="text-primary hover:text-primary-700 text-sm font-medium">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Filter and Sort Controls -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+                <div class="flex items-center space-x-4">
+                    <span class="text-text-secondary">Sort by:</span>
+                    <select id="sort-select" class="border border-secondary-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="reading-time">Reading Time</option>
+                    </select>
+                </div>
+                <div class="flex items-center space-x-2 text-sm text-text-secondary">
+                    <span id="article-count">24 articles found</span>
+                    <button id="clear-filters" class="text-primary hover:text-primary-700 hidden">Clear filters</button>
+                </div>
+            </div>
+
+            <!-- Articles Grid -->
+            <section id="articles-grid">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-container">
+                    <!-- Article 1 -->
+                    <article class="card hover:shadow-lg transition-all hover-lift article-card" data-category="technical" data-date="2025-01-02" data-views="1850">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Node.js Best Practices" class="w-full h-48 object-cover rounded-lg" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between text-sm text-text-secondary">
+                                <div class="flex items-center space-x-2">
+                                    <span>Jan 2, 2025</span>
+                                    <span>•</span>
+                                    <span>6 min read</span>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    1.8k
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-text-primary hover:text-primary transition-colors">
+                                <a href="javascript:void(0)">Node.js Best Practices for Production Applications</a>
+                            </h3>
+                            <p class="text-text-secondary">
+                                Essential best practices for building scalable and maintainable Node.js applications in production environments.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs bg-primary-100 text-primary px-2 py-1 rounded">Node.js</span>
+                                    <span class="text-xs bg-accent-100 text-accent px-2 py-1 rounded">Backend</span>
+                                </div>
+                                <a href="javascript:void(0)" class="text-primary hover:text-primary-700 text-sm font-medium">Read →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="card hover:shadow-lg transition-all hover-lift article-card" data-category="insights" data-date="2024-12-28" data-views="2100">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Web Development Trends 2025" class="w-full h-48 object-cover rounded-lg" loading="lazy" onerror="this.src='https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between text-sm text-text-secondary">
+                                <div class="flex items-center space-x-2">
+                                    <span>Dec 28, 2024</span>
+                                    <span>•</span>
+                                    <span>9 min read</span>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    2.1k
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-text-primary hover:text-primary transition-colors">
+                                <a href="javascript:void(0)">Web Development Trends to Watch in 2025</a>
+                            </h3>
+                            <p class="text-text-secondary">
+                                Explore the emerging trends and technologies that will shape web development in 2025 and beyond.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">Trends</span>
+                                    <span class="text-xs bg-warning-100 text-warning px-2 py-1 rounded">Industry</span>
+                                </div>
+                                <a href="javascript:void(0)" class="text-primary hover:text-primary-700 text-sm font-medium">Read →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="card hover:shadow-lg transition-all hover-lift article-card" data-category="technical" data-date="2024-12-20" data-views="1650">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="https://images.pixabay.com/photo/2016/11/29/06/15/code-1867992_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="CSS Grid Advanced Techniques" class="w-full h-48 object-cover rounded-lg" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between text-sm text-text-secondary">
+                                <div class="flex items-center space-x-2">
+                                    <span>Dec 20, 2024</span>
+                                    <span>•</span>
+                                    <span>7 min read</span>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    1.6k
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-text-primary hover:text-primary transition-colors">
+                                <a href="javascript:void(0)">Advanced CSS Grid Techniques for Complex Layouts</a>
+                            </h3>
+                            <p class="text-text-secondary">
+                                Master advanced CSS Grid techniques to create complex, responsive layouts with ease and precision.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">CSS</span>
+                                    <span class="text-xs bg-warning-100 text-warning px-2 py-1 rounded">Layout</span>
+                                </div>
+                                <a href="javascript:void(0)" class="text-primary hover:text-primary-700 text-sm font-medium">Read →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="card hover:shadow-lg transition-all hover-lift article-card" data-category="career" data-date="2024-12-15" data-views="2850">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Remote Work Tips for Developers" class="w-full h-48 object-cover rounded-lg" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between text-sm text-text-secondary">
+                                <div class="flex items-center space-x-2">
+                                    <span>Dec 15, 2024</span>
+                                    <span>•</span>
+                                    <span>5 min read</span>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    2.8k
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-text-primary hover:text-primary transition-colors">
+                                <a href="javascript:void(0)">10 Essential Tips for Remote Developer Productivity</a>
+                            </h3>
+                            <p class="text-text-secondary">
+                                Proven strategies to maintain high productivity and work-life balance while working remotely as a developer.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs bg-warning-100 text-warning px-2 py-1 rounded">Career</span>
+                                    <span class="text-xs bg-accent-100 text-accent px-2 py-1 rounded">Remote Work</span>
+                                </div>
+                                <a href="javascript:void(0)" class="text-primary hover:text-primary-700 text-sm font-medium">Read →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="card hover:shadow-lg transition-all hover-lift article-card" data-category="technical" data-date="2024-12-10" data-views="1920">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="TypeScript Advanced Features" class="w-full h-48 object-cover rounded-lg" loading="lazy" onerror="this.src='https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between text-sm text-text-secondary">
+                                <div class="flex items-center space-x-2">
+                                    <span>Dec 10, 2024</span>
+                                    <span>•</span>
+                                    <span>10 min read</span>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    1.9k
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-text-primary hover:text-primary transition-colors">
+                                <a href="javascript:void(0)">TypeScript Advanced Features You Should Know</a>
+                            </h3>
+                            <p class="text-text-secondary">
+                                Explore advanced TypeScript features that can improve your code quality and developer experience.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs bg-primary-100 text-primary px-2 py-1 rounded">TypeScript</span>
+                                    <span class="text-xs bg-accent-100 text-accent px-2 py-1 rounded">Advanced</span>
+                                </div>
+                                <a href="javascript:void(0)" class="text-primary hover:text-primary-700 text-sm font-medium">Read →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="card hover:shadow-lg transition-all hover-lift article-card" data-category="insights" data-date="2024-12-05" data-views="2300">
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="https://images.pixabay.com/photo/2018/05/14/16/54/cyber-3400789_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="AI in Web Development" class="w-full h-48 object-cover rounded-lg" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between text-sm text-text-secondary">
+                                <div class="flex items-center space-x-2">
+                                    <span>Dec 5, 2024</span>
+                                    <span>•</span>
+                                    <span>8 min read</span>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                    </svg>
+                                    2.3k
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-text-primary hover:text-primary transition-colors">
+                                <a href="javascript:void(0)">How AI is Transforming Web Development</a>
+                            </h3>
+                            <p class="text-text-secondary">
+                                Discover how artificial intelligence is revolutionizing the way we build and maintain web applications.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs bg-success-100 text-success px-2 py-1 rounded">AI</span>
+                                    <span class="text-xs bg-warning-100 text-warning px-2 py-1 rounded">Future</span>
+                                </div>
+                                <a href="javascript:void(0)" class="text-primary hover:text-primary-700 text-sm font-medium">Read →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-12">
+                    <button id="load-more-btn" class="btn-primary">
+                        <svg class="w-5 h-5 mr-2 animate-spin hidden" id="loading-spinner" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                        Load More Articles
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Newsletter Subscription Section -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white rounded-lg p-8 shadow-lg">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Stay Updated</h2>
+                <p class="text-lg text-text-secondary mb-8">
+                    Get the latest articles and insights delivered directly to your inbox. No spam, unsubscribe anytime.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+                    <button type="submit" class="btn-primary whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </form>
+                <p class="text-sm text-text-secondary mt-4">
+                    Join 2,500+ developers who read my weekly newsletter
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-semibold mb-4">Alex Morgan</h3>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        Full Stack Developer passionate about creating digital experiences that make a difference. Always learning, always building.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="portfolio_landing_page.html#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="portfolio_landing_page.html#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a></li>
+                        <li><a href="portfolio_landing_page.html#experience" class="text-gray-300 hover:text-white transition-colors">Experience</a></li>
+                        <li><a href="project_showcase_detail.html" class="text-gray-300 hover:text-white transition-colors">Projects</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="articles_blog.html" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="contact_collaboration.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-colors">Resume</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-colors">Portfolio</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">© 2025 Alex Morgan. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Functionality -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile filter toggle
+        const mobileFilterToggle = document.getElementById('mobile-filter-toggle');
+        const mobileFilterMenu = document.getElementById('mobile-filter-menu');
+
+        mobileFilterToggle.addEventListener('click', () => {
+            mobileFilterMenu.classList.toggle('hidden');
+        });
+
+        // Category filtering
+        const categoryFilters = document.querySelectorAll('.category-filter');
+        const mobileCategoryFilters = document.querySelectorAll('.mobile-category-filter');
+        const articleCards = document.querySelectorAll('.article-card');
+        const articleCount = document.getElementById('article-count');
+        const clearFiltersBtn = document.getElementById('clear-filters');
+
+        function filterArticles(category) {
+            let visibleCount = 0;
+            
+            articleCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            articleCount.textContent = `${visibleCount} articles found`;
+            
+            if (category !== 'all') {
+                clearFiltersBtn.classList.remove('hidden');
+            } else {
+                clearFiltersBtn.classList.add('hidden');
+            }
+        }
+
+        // Desktop category filters
+        categoryFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                categoryFilters.forEach(f => {
+                    f.classList.remove('active', 'text-primary', 'border-primary');
+                    f.classList.add('text-text-secondary');
+                });
+                
+                filter.classList.add('active', 'text-primary', 'border-b-2', 'border-primary');
+                filter.classList.remove('text-text-secondary');
+                
+                filterArticles(filter.dataset.category);
+            });
+        });
+
+        // Mobile category filters
+        mobileCategoryFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                mobileCategoryFilters.forEach(f => {
+                    f.classList.remove('active', 'bg-primary', 'text-white');
+                    f.classList.add('bg-secondary-100', 'text-text-secondary');
+                });
+                
+                filter.classList.add('active', 'bg-primary', 'text-white');
+                filter.classList.remove('bg-secondary-100', 'text-text-secondary');
+                
+                filterArticles(filter.dataset.category);
+            });
+        });
+
+        // Clear filters
+        clearFiltersBtn.addEventListener('click', () => {
+            // Reset desktop filters
+            categoryFilters.forEach(f => {
+                f.classList.remove('active', 'text-primary', 'border-primary');
+                f.classList.add('text-text-secondary');
+            });
+            categoryFilters[0].classList.add('active', 'text-primary', 'border-b-2', 'border-primary');
+            categoryFilters[0].classList.remove('text-text-secondary');
+
+            // Reset mobile filters
+            mobileCategoryFilters.forEach(f => {
+                f.classList.remove('active', 'bg-primary', 'text-white');
+                f.classList.add('bg-secondary-100', 'text-text-secondary');
+            });
+            mobileCategoryFilters[0].classList.add('active', 'bg-primary', 'text-white');
+            mobileCategoryFilters[0].classList.remove('bg-secondary-100', 'text-text-secondary');
+
+            filterArticles('all');
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            let visibleCount = 0;
+            
+            articleCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const excerpt = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            articleCount.textContent = `${visibleCount} articles found`;
+            
+            if (searchTerm) {
+                clearFiltersBtn.classList.remove('hidden');
+            }
+        });
+
+        // Sort functionality
+        const sortSelect = document.getElementById('sort-select');
+        const articlesContainer = document.getElementById('articles-container');
+
+        sortSelect.addEventListener('change', (e) => {
+            const sortBy = e.target.value;
+            const articles = Array.from(articleCards);
+            
+            articles.sort((a, b) => {
+                switch (sortBy) {
+                    case 'newest':
+                        return new Date(b.dataset.date) - new Date(a.dataset.date);
+                    case 'oldest':
+                        return new Date(a.dataset.date) - new Date(b.dataset.date);
+                    case 'popular':
+                        return parseInt(b.dataset.views) - parseInt(a.dataset.views);
+                    case 'reading-time':
+                        const aTime = parseInt(a.querySelector('.text-text-secondary').textContent.match(/\d+/)[0]);
+                        const bTime = parseInt(b.querySelector('.text-text-secondary').textContent.match(/\d+/)[0]);
+                        return aTime - bTime;
+                    default:
+                        return 0;
+                }
+            });
+
+            // Re-append sorted articles
+            articles.forEach(article => {
+                articlesContainer.appendChild(article);
+            });
+        });
+
+        // Load more functionality
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        const loadingSpinner = document.getElementById('loading-spinner');
+
+        loadMoreBtn.addEventListener('click', () => {
+            loadingSpinner.classList.remove('hidden');
+            loadMoreBtn.disabled = true;
+            
+            // Simulate loading delay
+            setTimeout(() => {
+                // In a real application, you would fetch more articles here
+                loadingSpinner.classList.add('hidden');
+                loadMoreBtn.disabled = false;
+                loadMoreBtn.textContent = 'No More Articles';
+                loadMoreBtn.disabled = true;
+            }, 1500);
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.article-card, .featured-article').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Newsletter form submission
+        const newsletterForm = document.querySelector('form');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            if (email) {
+                alert('Thank you for subscribing! You will receive a confirmation email shortly.');
+                e.target.reset();
+            }
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
